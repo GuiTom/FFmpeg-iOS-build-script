@@ -34,6 +34,8 @@ Use build-ffmpeg-tvos.sh for tvOS.
 
         ./build-ffmpeg.sh lipo
 
+* To merge all *.a files to one .a file,refer https://www.cnblogs.com/zzugyl/p/3328628.html
+
 ## Download
 
 You can download a binary for FFmpeg 4.2 release at https://downloads.sourceforge.net/project/ffmpeg-ios/ffmpeg-ios-master.tar.bz2
