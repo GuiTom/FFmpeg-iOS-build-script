@@ -167,3 +167,22 @@ then
 fi
 
 echo Done
+#merge .a files to a single .a file
+
+#使用ar命令，将这四个.a文件都解出.o文件
+ar x libavcodec.a
+ar x libavdevice.a
+ar x libavfilter.a
+ar x libavformat.a
+ar x libavutil.a
+ar x swresample.a
+ar x libswscale.a
+
+#合并.o文件
+ar cru libffmpeg.a *.o
+
+#更新库的符号表
+ranlib libffmpeg.a
+
+#删除.o文件
+rm -f *.o
